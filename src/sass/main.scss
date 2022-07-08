@@ -652,6 +652,19 @@
 					margin: 0 auto;
 					white-space: nowrap;
 					left: 24px;
+					
+					a {
+						text-decoration: none;
+
+						h3 {
+							transition: all 500ms ease;
+						}
+
+						&:hover h3,
+						&:focus h3 {
+							color: $text-hover;
+						}
+					}
 
 					p {
 						line-height: 1em;
