@@ -425,11 +425,6 @@
 			display: block;
 			width: 100%;
 			border-radius: 8px;
-
-			&.car {
-				height: 220px;
-				object-fit: cover;
-			}
 		}
 
 		&:before {
@@ -736,14 +731,13 @@
 					text-transform: uppercase;
 					font-weight: 800;
 					font-size: 0.95em;
-					letter-spacing: 0.075em;
 					padding: 0.5em 0.8em 0.5em 0.8em;
 					border-radius: 6px;
 					outline: 0;
 					transition: all 500ms ease;
 
 					&:before {
-							color: $wight-color;
+							color: $icon-nav;
 					}
 
 					&:hover,
@@ -830,9 +824,9 @@
 			border-left: 0;
 			border-right: 0;
 			color: $wight-color;
-			font-size: 2.35em;
+			font-size: 2.7em;
 			font-weight: 700;
-			line-height: 1.3em;
+			line-height: 1.4em;
 			margin: 0 0 1.5em 0;
 
 			strong {
