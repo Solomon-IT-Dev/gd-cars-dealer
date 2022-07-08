@@ -642,6 +642,11 @@
 
 					p {
 						font-size: 1.2em;
+
+						strong {
+							font-size: 24px;
+							color: $text-main-green;
+						}
 					}
 				}
 
@@ -662,12 +667,13 @@
 
 						&:hover h3,
 						&:focus h3 {
-							color: $text-hover;
+							color: $grey-secondary
 						}
 					}
 
 					p {
 						line-height: 1em;
+						color: $text-main-green;
 					}
 
 					&:before {
