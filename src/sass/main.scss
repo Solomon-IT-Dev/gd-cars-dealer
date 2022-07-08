@@ -123,7 +123,8 @@
 	a {
 		color: inherit;
 		text-decoration: underline;
-		&:hover {
+		&:hover,
+		&:focus {
 			text-decoration: none;
 		}
 	}
@@ -504,7 +505,8 @@
 			top: 0.05em;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $btn-hover;
 		}
 
@@ -526,7 +528,8 @@
 		&.alt {
 			background-color: $btn-alt-main;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				background-color: $btn-alt-hover;
 			}
 
@@ -737,6 +740,16 @@
 					padding: 0.5em 0.8em 0.5em 0.8em;
 					border-radius: 6px;
 					outline: 0;
+					transition: all 500ms ease;
+
+					&:before {
+							color: $wight-color;
+					}
+
+					&:hover,
+					&:focus {
+						color: $text-hover;
+					}
 				}
 			}
 
@@ -744,8 +757,15 @@
 			&.current_page_item > a,
 			&.active > span,
 			&.current_page_item > span {
+				color: $text-main-green;
 				background: rgba(0, 0, 0, 0.15);
 				box-shadow: inset 1px 1px 0px 0px rgba(0, 0, 0, 0.025), 1px 1px 0px 0px rgba(255, 255, 255, 0.025);
+				transition: all 500ms ease;
+
+				&:hover,
+				&:focus {
+					color: $text-hover;
+				}
 			}
 
 			&:last-child {
@@ -768,7 +788,7 @@
 		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		padding: 1.5em;
 		line-height: 2.5em;
-		min-width: 15em;
+		min-width: 14.2em;
 
 		&.level-0 {
 			border-top-left-radius: 0;
@@ -785,9 +805,11 @@
 			font-size: 0.8em;
 			letter-spacing: 0.075em;
 			outline: 0;
+			transition: all 250ms ease;
 		}
 
-		li:hover > {
+		li:hover >,
+		li:focus > {
 			a, span {
 				color: $wight-color;
 			}
@@ -804,11 +826,10 @@
 		padding: 9em 0 6em 0;
 
 		h2 {
-			border: solid 1px rgba(255, 255, 255, 0.25);
+			border: solid 1px rgba(255, 255, 255, 0.8);
 			border-left: 0;
 			border-right: 0;
 			color: $wight-color;
-			color: rgba(255, 255, 255, 0.75);
 			font-size: 2.35em;
 			font-weight: 700;
 			line-height: 1.3em;
@@ -816,7 +837,7 @@
 
 			strong {
 				font-weight: 800;
-				color: inherit;
+				color: $text-main-green;
 			}
 
 			&:before {
@@ -824,7 +845,7 @@
 				display: block;
 				border-top: solid 1px;
 				border-color: $border-elem;
-				border-color: rgba(255, 255, 255, 0.25);
+				border-color: rgba(255, 255, 255, 0.8);
 				margin: 10px 0 1.25em 0;
 			}
 
@@ -833,7 +854,7 @@
 				display: block;
 				border-bottom: solid 1px;
 				border-color: $border-elem;
-				border-color: rgba(255, 255, 255, 0.25);
+				border-color: rgba(255, 255, 255, 0.8);
 				margin: 1.25em 0 10px 0;
 			}
 		}
@@ -841,7 +862,6 @@
 		p {
 			text-transform: uppercase;
 			color: $wight-color;
-			color: rgba(255, 255, 255, 0.75);
 			font-size: 1.5em;
 			font-weight: 700;
 			line-height: 1.3em;
@@ -865,9 +885,13 @@
 /* Wrappers */
 
 	#header-wrapper {
-		background: url('../images/bg/bg01.png'), url('../images/header.jpg');
-		background-position: top left, center center;
-		background-size: auto, cover;
+		background: linear-gradient(to right,
+				rgba(47, 48, 58, 0.4),
+				rgba(47, 48, 58, 0.4)), 
+				url('../images/bg/bg01.png'), 
+				url('../images/header.jpg');
+		background-position: top left, top left, center center;
+		background-size: auto, auto, cover;
 		padding: 3em 0;
 	}
 
@@ -1136,7 +1160,7 @@
 					&:before {
 						display: inline-block;
 						text-decoration: none;
-						font-size: 18px;
+						font-size: 25px;
 						width: 44px;
 						height: 44px;
 						line-height: 44px;
